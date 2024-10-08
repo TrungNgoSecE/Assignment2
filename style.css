@@ -1,0 +1,44 @@
+*{
+  font-family: Arial;
+}
+
+
+.cta-button {
+  background-color: #0077cc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.cta-button:hover {
+  background-color: red;
+}
+nav {
+  text-align: center;
+}
+button {
+    background-color: #0077cc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+button:active{
+  background-color: lightblue;
+}
+
+.hero {
+  background-color: #f2f2f2;
+  padding: 100px 20px;
+  text-align: center;
+  animation: fadeIn 3s ease-in-out;
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+.hero h1 {
+  margin-bottom: 20px;
+}
+
+.hero p {
+  margin-bottom: 30px;
+}
