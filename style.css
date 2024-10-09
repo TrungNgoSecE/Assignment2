@@ -120,7 +120,10 @@ footer {
   text-align: center;
   padding: 50px 20px;
 }
-@media (min-width: 1200px){
+
+/* media queries*/
+@media (min-width: 1200px)
+{
   .hero {
     font-size: 2rem;
   }
@@ -183,5 +186,5 @@ footer {
 }
 img {
   border-radius: 15px;
-  animation: fadeIn 5s ease-in-out;
+  animation: fadeIn 7s ease-in-out;
 }
