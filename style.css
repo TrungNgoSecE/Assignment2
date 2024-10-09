@@ -9,6 +9,7 @@
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
+  
 }
 .cta-button:hover {
   background-color: red;
@@ -23,22 +24,82 @@ button {
     border-radius: 5px;
     text-decoration: none;
     font-size: 1rem;
+  
 }
 button:active{
   background-color: lightblue;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
 }
 
 .hero {
   background-color: #f2f2f2;
   padding: 100px 20px;
   text-align: center;
-  animation: fadeIn 3s ease-in-out;
+  animation: fadeIn 3s ease-in;
   font-size: clamp(1rem, 2vw, 2rem);
 }
+
 .hero h1 {
   margin-bottom: 20px;
 }
 
 .hero p {
   margin-bottom: 30px;
+}
+
+.services {
+    background-color: lightblue;
+    padding: 50px 20px;
+    text-align: center;
+}
+.wrapper {
+  text-align: center;
+}
+
+@keyframes slideInLeft{
+0% {
+  transform: translateX(-300px);
+}
+100% {
+  transform: translateX(0);
+}
+}
+
+.box1 {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    animation: slideInLeft 3s ease-in;
+    display: ;
+}
+.box2 {
+  background-color: #ffffff;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    animation: slideInLeft 3s ease-in;
+    display: ;
+}
+.about{
+  padding: 50px 20px;
+  text-align: center;
+}
+footer {
+  background-color: #0077cc;
+  text-align: center;
+  padding: 50px 20px;
 }
