@@ -1,8 +1,8 @@
 *{
-  font-family: Arial;
+  font-family: Arial; /* Global Styles: Applies to the entire page */
 }
 
-
+/* Button Styles */
 .cta-button {
   background-color: #0077cc;
   color: white;
@@ -11,12 +11,14 @@
   text-decoration: none;
   
 }
+/* Hover effect over buttons */
 .cta-button:hover {
   background-color: red;
 }
 nav {
   text-align: center;
 }
+
 button {
     background-color: #0077cc;
     color: white;
@@ -32,10 +34,10 @@ button:active{
 
 @keyframes fadeIn {
   from {
-      opacity: 0;
+      opacity: 0; /* Start with the element completely transparent */
   }
   to {
-      opacity: 1;
+      opacity: 1; /* Fade to fully visible */
   }
 }
 
@@ -43,8 +45,8 @@ button:active{
   background-color: #f2f2f2;
   padding: 100px 20px;
   text-align: center;
-  animation: fadeIn 3s ease-in;
-  font-size: clamp(1rem, 2vw, 2rem);
+  animation: fadeIn 3s ease-in; /* Applies fade-in animation over 3 seconds */
+  font-size: clamp(1rem, 2vw, 2rem); /* Responsive font size that adapts to screen size */
 }
 
 .hero h1 {
@@ -65,14 +67,18 @@ button:active{
 }
 
 @keyframes slideInLeft{
-0% {
-  transform: translateX(-300px);
+from {
+  transform: translateX(-100%);/* Start off-screen to the left */
+  opacity: 0;
 }
-100% {
-  transform: translateX(0);
+to {
+  transform: translateX(0); /* End at original position */
+  opacity: 1;
 }
 }
-
+.wrapper{
+  display: flex;
+}
 .box1 {
     background-color: #ffffff;
     padding: 20px;
@@ -80,19 +86,30 @@ button:active{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 200px;
     text-align: center;
-    animation: slideInLeft 3s ease-in;
-    display: ;
+    animation: slideInLeft 3s ease-in; /* Slide in from the left over 3 seconds */
+    flex: 1;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);/* Start off-screen to the right */
+    opacity: 0;}
+  to {
+    transform: translateX(0); /* End at original position */
+    opacity: 1;
+  }
 }
 .box2 {
   background-color: #ffffff;
-    margin-top: 20px;
+    margin-left: 20px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 200px;
     text-align: center;
-    animation: slideInLeft 3s ease-in;
-    display: ;
+    animation: slideInRight 3s ease-in; /* Slide in from the right over 3 seconds */
+    flex: 1;
+
 }
 .about{
   padding: 50px 20px;
@@ -102,4 +119,69 @@ footer {
   background-color: #0077cc;
   text-align: center;
   padding: 50px 20px;
+}
+@media (min-width: 1200px){
+  .hero {
+    font-size: 2rem;
+  }
+  .box1, .box2 {
+    width: 300px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+  .hero {
+    font-size: 1.5rem;
+    padding: 80px 20px;
+  
+}
+  .box1, .box2 {
+    width: 250px;
+}
+}
+
+@media (max-width: 768px) {
+  nav {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .hero {
+    font-size: 1rem;
+    padding: 60px 20px;
+  }
+  
+  .box1, .box2 {
+    width: 100%;
+  }
+  
+  .cta-button {
+    font-size: 1rem;
+  }
+  
+  .services, .about {
+    padding: 30px 20px;
+  }
+
+  footer {
+    padding: 30px 20px;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;}
+  to {
+    transform: translateX(0); 
+    opacity: 1;
+  }
+}
+.pic1 {
+  text-align: center;
+  margin-top: 10px;
+}
+img {
+  border-radius: 15px;
+  animation: fadeIn 5s ease-in-out;
 }
